@@ -9,18 +9,18 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root{
-    --bg:#0A1530;
-    --surface:#11203F;
-    --surface-alt:#16294E;
-    --border:#33476E;
+    --bg:#140F26;
+    --surface:#1E1839;
+    --surface-alt:#281F49;
+    --border:#40355E;
     --ink:#FFFFFF;
-    --ink-soft:#DCE3F2;
-    --ink-faint:#9AA7C4;
-    --silver:#C2CEE3;
-    --blue:#5B8DEF;
-    --blue-bg:rgba(91,141,239,0.18);
-    --green:#3FD17E;
-    --red:#FF6F61;
+    --ink-soft:#E6DFF7;
+    --ink-faint:#9C8FC2;
+    --silver:#D9CCFB;
+    --blue:#8B5CF6;
+    --blue-bg:rgba(139,92,246,0.18);
+    --green:#4ADE9C;
+    --red:#FF6B8B;
   }
   *{box-sizing:border-box;}
   body{
@@ -133,7 +133,7 @@
   tr.slot-row.done .slot-checkbox svg path{ stroke-dashoffset:0; }
   tr.slot-row.done .slot-text{ color:var(--ink-soft); text-decoration:line-through; text-decoration-color:var(--ink-faint); }
   tr.slot-row.empty .slot-time-input{ opacity:0.55; }
-  tr.slot-row.current-row{ background:rgba(91,141,239,0.15); }
+  tr.slot-row.current-row{ background:rgba(139,92,246,0.15); }
   tr.slot-row.current-row .slot-time-input{ color:var(--blue); font-weight:600; opacity:1; }
   tr.slot-row.current-row td:first-child{ box-shadow:inset 3px 0 0 var(--blue); }
 
@@ -166,7 +166,7 @@
   .add-habit-row input[type="number"]{ width:62px; }
   .add-habit-row label{ font-size:11.5px; color:var(--ink-soft); }
   .add-habit-row #habits-submitBtn, .add-habit-row #rphase-submitBtn{ padding:8px 14px; border:none; border-radius:8px; background:var(--blue); color:#fff; font-size:13px; cursor:pointer; }
-  .add-habit-row #habits-submitBtn:hover, .add-habit-row #rphase-submitBtn:hover{ background:#3F6FD6; }
+  .add-habit-row #habits-submitBtn:hover, .add-habit-row #rphase-submitBtn:hover{ background:#7048E8; }
 
   /* SUB-TABS innerhalb Habits / R-Phase */
   .section-topbar{ display:flex; align-items:center; justify-content:space-between; gap:10px; margin-bottom:14px; flex-wrap:wrap; }
@@ -226,18 +226,18 @@
   }
   .calendar-cell.empty{ border:none; }
   .calendar-cell.heat-0{ background:var(--surface-alt); }
-  .calendar-cell.heat-1{ background:rgba(91,141,239,0.22); border-color:transparent; }
-  .calendar-cell.heat-2{ background:rgba(91,141,239,0.42); border-color:transparent; }
-  .calendar-cell.heat-3{ background:rgba(91,141,239,0.66); border-color:transparent; color:#fff; }
-  .calendar-cell.heat-4{ background:rgba(91,141,239,0.95); border-color:transparent; color:#0A1530; font-weight:700; }
+  .calendar-cell.heat-1{ background:rgba(139,92,246,0.22); border-color:transparent; }
+  .calendar-cell.heat-2{ background:rgba(139,92,246,0.42); border-color:transparent; }
+  .calendar-cell.heat-3{ background:rgba(139,92,246,0.66); border-color:transparent; color:#fff; }
+  .calendar-cell.heat-4{ background:rgba(139,92,246,0.95); border-color:transparent; color:#140F26; font-weight:700; }
   .calendar-cell.today-cell{ outline:1.5px solid var(--silver); outline-offset:-1px; }
   .calendar-legend{ display:flex; align-items:center; gap:5px; margin-top:12px; font-size:10.5px; color:var(--ink-faint); }
   .legend-swatch{ width:12px; height:12px; border-radius:3px; }
   .legend-swatch.heat-0{ background:var(--surface-alt); border:1px solid var(--border); }
-  .legend-swatch.heat-1{ background:rgba(91,141,239,0.22); }
-  .legend-swatch.heat-2{ background:rgba(91,141,239,0.42); }
-  .legend-swatch.heat-3{ background:rgba(91,141,239,0.66); }
-  .legend-swatch.heat-4{ background:rgba(91,141,239,0.95); }
+  .legend-swatch.heat-1{ background:rgba(139,92,246,0.22); }
+  .legend-swatch.heat-2{ background:rgba(139,92,246,0.42); }
+  .legend-swatch.heat-3{ background:rgba(139,92,246,0.66); }
+  .legend-swatch.heat-4{ background:rgba(139,92,246,0.95); }
 
   .load-more{ display:block; margin:14px auto 0; border:1px solid var(--border); background:var(--surface-alt); border-radius:8px; padding:6px 14px; font-size:12px; color:var(--ink-soft); cursor:pointer; }
   .status-line{ font-size:11px; color:var(--ink-faint); text-align:center; margin-top:10px; min-height:14px; }
@@ -263,8 +263,8 @@
   .entry-add-row{ display:flex; gap:8px; margin-top:14px; }
   .entry-add-row .load-more{ margin:0; }
   .entry-type-badge{ width:64px; flex-shrink:0; font-size:11px; font-weight:600; text-align:center; padding:3px 6px; border-radius:6px; }
-  .entry-type-badge.expense{ color:var(--red); background:rgba(255,111,97,0.14); }
-  .entry-type-badge.income{ color:var(--green); background:rgba(63,209,126,0.14); }
+  .entry-type-badge.expense{ color:var(--red); background:rgba(255,107,139,0.14); }
+  .entry-type-badge.income{ color:var(--green); background:rgba(74,222,156,0.14); }
 
   /* FINANCE */
   .cat-row{ display:flex; align-items:center; gap:10px; padding:5px 0; }
@@ -278,51 +278,25 @@
 
 <svg class="bg-decor" viewBox="0 0 800 1400" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="chromeGrad1" x1="0%" y1="0%" x2="100%" y2="30%">
-      <stop offset="0%" stop-color="#0A1530" stop-opacity="0"/>
-      <stop offset="14%" stop-color="#3E5A96" stop-opacity="0.5"/>
-      <stop offset="27%" stop-color="#EAF1FF" stop-opacity="0.75"/>
-      <stop offset="38%" stop-color="#5B8DEF" stop-opacity="0.45"/>
-      <stop offset="52%" stop-color="#0F1E3E" stop-opacity="0.25"/>
-      <stop offset="66%" stop-color="#C2CEE3" stop-opacity="0.6"/>
-      <stop offset="80%" stop-color="#3E5A96" stop-opacity="0.35"/>
-      <stop offset="100%" stop-color="#0A1530" stop-opacity="0"/>
-    </linearGradient>
-    <linearGradient id="chromeGrad2" x1="100%" y1="0%" x2="0%" y2="20%">
-      <stop offset="0%" stop-color="#0A1530" stop-opacity="0"/>
-      <stop offset="20%" stop-color="#C2CEE3" stop-opacity="0.5"/>
-      <stop offset="35%" stop-color="#0F1E3E" stop-opacity="0.3"/>
-      <stop offset="50%" stop-color="#FFFFFF" stop-opacity="0.55"/>
-      <stop offset="68%" stop-color="#3E5A96" stop-opacity="0.42"/>
-      <stop offset="85%" stop-color="#5B8DEF" stop-opacity="0.3"/>
-      <stop offset="100%" stop-color="#0A1530" stop-opacity="0"/>
-    </linearGradient>
-    <radialGradient id="glowSpot" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#5B8DEF" stop-opacity="0.22"/>
-      <stop offset="100%" stop-color="#5B8DEF" stop-opacity="0"/>
+    <radialGradient id="glowViolet" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#8B5CF6" stop-opacity="0.38"/>
+      <stop offset="100%" stop-color="#8B5CF6" stop-opacity="0"/>
     </radialGradient>
-    <linearGradient id="chromeHighlight" x1="0%" y1="0%" x2="100%" y2="10%">
-      <stop offset="0%" stop-color="#0A1530" stop-opacity="0"/>
-      <stop offset="30%" stop-color="#FFFFFF" stop-opacity="0.85"/>
-      <stop offset="50%" stop-color="#EAF1FF" stop-opacity="0.95"/>
-      <stop offset="70%" stop-color="#FFFFFF" stop-opacity="0.85"/>
-      <stop offset="100%" stop-color="#0A1530" stop-opacity="0"/>
-    </linearGradient>
+    <radialGradient id="glowMint" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#4ADE9C" stop-opacity="0.26"/>
+      <stop offset="100%" stop-color="#4ADE9C" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowCoral" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FF6B8B" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#FF6B8B" stop-opacity="0"/>
+    </radialGradient>
   </defs>
 
-  <circle cx="120" cy="180" r="260" fill="url(#glowSpot)"/>
-  <circle cx="700" cy="1150" r="320" fill="url(#glowSpot)"/>
-
-  <path d="M -100 60 C 80 -60, 160 240, 340 90 C 480 -30, 560 260, 720 70 C 830 -60, 900 100, 960 30"
-        stroke="url(#chromeGrad1)" stroke-width="70" fill="none" stroke-linecap="round" opacity="0.9"/>
-  <path d="M -100 380 C 60 520, 220 210, 380 400 C 540 590, 640 280, 800 440 C 900 550, 940 380, 970 430"
-        stroke="url(#chromeGrad2)" stroke-width="85" fill="none" stroke-linecap="round" opacity="0.9"/>
-  <path d="M -100 700 C 100 560, 200 820, 400 660 C 580 520, 680 800, 860 650 C 940 580, 950 700, 980 660"
-        stroke="url(#chromeGrad1)" stroke-width="95" fill="none" stroke-linecap="round" opacity="0.9"/>
-  <path d="M -100 1020 C 90 1170, 240 900, 420 1060 C 580 1200, 660 940, 840 1080 C 920 1140, 950 1020, 980 1060"
-        stroke="url(#chromeGrad2)" stroke-width="80" fill="none" stroke-linecap="round" opacity="0.9"/>
-  <path d="M -100 1300 C 110 1160, 260 1400, 460 1240 C 620 1120, 720 1360, 900 1210"
-        stroke="url(#chromeGrad1)" stroke-width="65" fill="none" stroke-linecap="round" opacity="0.85"/>
+  <circle cx="80" cy="140" r="320" fill="url(#glowViolet)"/>
+  <circle cx="760" cy="420" r="260" fill="url(#glowMint)"/>
+  <circle cx="60" cy="920" r="300" fill="url(#glowCoral)"/>
+  <circle cx="700" cy="1260" r="340" fill="url(#glowViolet)"/>
+  <circle cx="420" cy="700" r="220" fill="url(#glowMint)"/>
 
   <g id="fineLines"></g>
 </svg>
@@ -669,45 +643,26 @@ function buildDateRange(n){
   return arr;
 }
 
-/* ---------- HINTERGRUND: viele feine, unregelmässig geschwungene Chrom-Linien ---------- */
+/* ---------- HINTERGRUND: verstreutes Sternenfeld über den Aurora-Blobs ---------- */
 function rnd(i){ const x = Math.sin(i*991.23)*10000; return x - Math.floor(x); }
-function wavePath(yBase, amp, freq, phase, xStart, xEnd, steps){
-  let d = '';
-  for(let s=0;s<=steps;s++){
-    const t = s/steps;
-    const x = xStart + (xEnd-xStart)*t;
-    const y = yBase
-      + amp * Math.sin(freq*t*Math.PI*2 + phase)
-      + amp*0.4 * Math.sin(freq*2.3*t*Math.PI*2 + phase*1.7);
-    d += (s===0 ? 'M' : 'L') + ` ${x.toFixed(1)} ${y.toFixed(1)} `;
-  }
-  return d;
-}
-function generateFineLines(){
+function generateStarField(){
   const g = document.getElementById('fineLines');
   if(!g) return;
-  const numLines = 30;
-  const xStart = -250, xEnd = 1050;
-  const yTop = -250, yBottom = 1650;
+  const numDots = 130;
+  const colors = ['#D9CCFB','#8B5CF6','#4ADE9C','#FF6B8B','#FFFFFF'];
   let parts = [];
-  for(let i=0;i<numLines;i++){
-    const t = i/(numLines-1);
-    const yBase = yTop + (yBottom-yTop)*t;
-    const r1 = rnd(i*3+1), r2 = rnd(i*7+2), r3 = rnd(i*11+3);
-    const amp = 26 + r1*74;
-    const freq = 1.0 + r2*1.7;
-    const phase = r3*Math.PI*2;
-    const isHighlight = i%4===2;
-    const gradId = isHighlight ? 'chromeHighlight' : (i%2===0 ? 'chromeGrad1' : 'chromeGrad2');
-    const strokeW = isHighlight ? (0.8+r1*1.3) : (1.2+r2*3.4);
-    const opacity = isHighlight ? (0.45+r3*0.35) : (0.16+r1*0.28);
-    const d = wavePath(yBase, amp, freq, phase, xStart, xEnd, 36);
-    parts.push(`<path d="${d}" stroke="url(#${gradId})" stroke-width="${strokeW.toFixed(2)}" fill="none" stroke-linecap="round" opacity="${opacity.toFixed(2)}"/>`);
+  for(let i=0;i<numDots;i++){
+    const r1 = rnd(i*3+1), r2 = rnd(i*7+2), r3 = rnd(i*11+3), r4 = rnd(i*13+5);
+    const x = -60 + r1*920;
+    const y = -80 + r2*1560;
+    const radius = 0.8 + r3*3;
+    const opacity = 0.12 + r4*0.5;
+    const color = colors[i % colors.length];
+    parts.push(`<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="${radius.toFixed(2)}" fill="${color}" opacity="${opacity.toFixed(2)}"/>`);
   }
-  g.setAttribute('transform', 'rotate(-13 400 700)');
   g.innerHTML = parts.join('');
 }
-generateFineLines();
+generateStarField();
 
 /* ---------- DATENSICHERUNG: Export/Import (Schutz vor Speicherverlust) ---------- */
 function setDataStatus(msg){ document.getElementById('dataStatus').textContent = msg; }
@@ -1054,8 +1009,8 @@ function buildValueChartSvg(dates, values, idPrefix, opts){
   let gridSvg = '';
   [0, axisMax*0.25, axisMax*0.5, axisMax*0.75, axisMax].forEach(v=>{
     const y = yFor(v);
-    gridSvg += `<line x1="${padLeft}" y1="${y.toFixed(1)}" x2="${width-padRight}" y2="${y.toFixed(1)}" stroke="#2B3F66" stroke-width="1" stroke-dasharray="2 5"/>`;
-    gridSvg += `<text x="${padLeft-8}" y="${(y+3).toFixed(1)}" text-anchor="end" font-size="10" fill="#9AA7C4" font-family="Inter,sans-serif">${Math.round(v)}${unitLabel}</text>`;
+    gridSvg += `<line x1="${padLeft}" y1="${y.toFixed(1)}" x2="${width-padRight}" y2="${y.toFixed(1)}" stroke="#362A54" stroke-width="1" stroke-dasharray="2 5"/>`;
+    gridSvg += `<text x="${padLeft-8}" y="${(y+3).toFixed(1)}" text-anchor="end" font-size="10" fill="#9C8FC2" font-family="Inter,sans-serif">${Math.round(v)}${unitLabel}</text>`;
   });
 
   const linePoints = values.map((v,i)=>`${xFor(i).toFixed(1)},${yFor(v).toFixed(1)}`).join(' ');
@@ -1065,8 +1020,8 @@ function buildValueChartSvg(dates, values, idPrefix, opts){
     ` L ${xFor(n-1).toFixed(1)},${baseline} Z`;
 
   const yAvg = yFor(avg);
-  const avgSvg = `<line x1="${padLeft}" y1="${yAvg.toFixed(1)}" x2="${width-padRight}" y2="${yAvg.toFixed(1)}" stroke="#C2CEE3" stroke-width="1.3" stroke-dasharray="5 4"/>
-    <text x="${width-padRight+6}" y="${(yAvg+3.5).toFixed(1)}" text-anchor="start" font-size="10.5" fill="#C2CEE3" font-family="Inter,sans-serif">Ø ${Math.round(avg)}${unitLabel}</text>`;
+  const avgSvg = `<line x1="${padLeft}" y1="${yAvg.toFixed(1)}" x2="${width-padRight}" y2="${yAvg.toFixed(1)}" stroke="#D9CCFB" stroke-width="1.3" stroke-dasharray="5 4"/>
+    <text x="${width-padRight+6}" y="${(yAvg+3.5).toFixed(1)}" text-anchor="start" font-size="10.5" fill="#D9CCFB" font-family="Inter,sans-serif">Ø ${Math.round(avg)}${unitLabel}</text>`;
 
   const labelStep = n<=14 ? 1 : n<=30 ? 2 : Math.ceil(n/18);
   let pointsSvg = '';
@@ -1074,9 +1029,9 @@ function buildValueChartSvg(dates, values, idPrefix, opts){
     const x = xFor(i), y = yFor(v);
     const isToday = i===n-1;
     const dLabel = `${dates[i].getDate()}.${dates[i].getMonth()+1}.`;
-    pointsSvg += `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="${isToday?4:2.6}" fill="${isToday?'#5B8DEF':'#DCE3F2'}" stroke="#0A1530" stroke-width="1"><title>${dLabel} — ${Math.round(v)}${unitLabel}</title></circle>`;
+    pointsSvg += `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="${isToday?4:2.6}" fill="${isToday?'#8B5CF6':'#E6DFF7'}" stroke="#140F26" stroke-width="1"><title>${dLabel} — ${Math.round(v)}${unitLabel}</title></circle>`;
     if(i % labelStep === 0 || isToday){
-      pointsSvg += `<text x="${x.toFixed(1)}" y="${(y-9).toFixed(1)}" text-anchor="middle" font-size="9.5" fill="#DCE3F2" font-family="Inter,sans-serif">${Math.round(v)}${unitLabel}</text>`;
+      pointsSvg += `<text x="${x.toFixed(1)}" y="${(y-9).toFixed(1)}" text-anchor="middle" font-size="9.5" fill="#E6DFF7" font-family="Inter,sans-serif">${Math.round(v)}${unitLabel}</text>`;
     }
   });
 
@@ -1084,20 +1039,20 @@ function buildValueChartSvg(dates, values, idPrefix, opts){
   let xLabelsSvg = '';
   dates.forEach((d,i)=>{
     if(i % xLabelStep === 0 || i===n-1){
-      xLabelsSvg += `<text x="${xFor(i).toFixed(1)}" y="${height-8}" text-anchor="middle" font-size="9.5" fill="#7F8CAB" font-family="Inter,sans-serif">${d.getDate()}.${d.getMonth()+1}.</text>`;
+      xLabelsSvg += `<text x="${xFor(i).toFixed(1)}" y="${height-8}" text-anchor="middle" font-size="9.5" fill="#7A6FA0" font-family="Inter,sans-serif">${d.getDate()}.${d.getMonth()+1}.</text>`;
     }
   });
 
   return `<svg viewBox="0 0 ${width} ${height}" width="${width}" height="${height}" xmlns="http://www.w3.org/2000/svg">
     <defs>
       <linearGradient id="${gradId}" x1="0" y1="0" x2="0" y2="1">
-        <stop offset="0%" stop-color="#5B8DEF" stop-opacity="0.38"/>
-        <stop offset="100%" stop-color="#5B8DEF" stop-opacity="0"/>
+        <stop offset="0%" stop-color="#8B5CF6" stop-opacity="0.38"/>
+        <stop offset="100%" stop-color="#8B5CF6" stop-opacity="0"/>
       </linearGradient>
     </defs>
     ${gridSvg}
     <path d="${areaPath}" fill="url(#${gradId})" stroke="none"/>
-    <polyline points="${linePoints}" fill="none" stroke="#5B8DEF" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/>
+    <polyline points="${linePoints}" fill="none" stroke="#8B5CF6" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/>
     ${avgSvg}
     ${pointsSvg}
     ${xLabelsSvg}
@@ -1111,7 +1066,7 @@ function buildScoreChartSvg(dates, scores, idPrefix){
 function buildDualValueChartSvg(dates, seriesA, seriesB, idPrefix, opts){
   opts = opts || {};
   const labelA = opts.labelA || 'A', labelB = opts.labelB || 'B';
-  const colorA = opts.colorA || '#5B8DEF', colorB = opts.colorB || '#3FD17E';
+  const colorA = opts.colorA || '#8B5CF6', colorB = opts.colorB || '#4ADE9C';
   const unitLabel = opts.unitLabel || '';
   const n = dates.length;
   if(n === 0) return '<div class="chart-empty">Keine Daten vorhanden.</div>';
@@ -1129,8 +1084,8 @@ function buildDualValueChartSvg(dates, seriesA, seriesB, idPrefix, opts){
   let gridSvg = '';
   [0, axisMax*0.25, axisMax*0.5, axisMax*0.75, axisMax].forEach(v=>{
     const y = yFor(v);
-    gridSvg += `<line x1="${padLeft}" y1="${y.toFixed(1)}" x2="${width-padRight}" y2="${y.toFixed(1)}" stroke="#2B3F66" stroke-width="1" stroke-dasharray="2 5"/>`;
-    gridSvg += `<text x="${padLeft-8}" y="${(y+3).toFixed(1)}" text-anchor="end" font-size="10" fill="#9AA7C4" font-family="Inter,sans-serif">${Math.round(v)}</text>`;
+    gridSvg += `<line x1="${padLeft}" y1="${y.toFixed(1)}" x2="${width-padRight}" y2="${y.toFixed(1)}" stroke="#362A54" stroke-width="1" stroke-dasharray="2 5"/>`;
+    gridSvg += `<text x="${padLeft-8}" y="${(y+3).toFixed(1)}" text-anchor="end" font-size="10" fill="#9C8FC2" font-family="Inter,sans-serif">${Math.round(v)}</text>`;
   });
 
   function seriesSvg(values, color){
@@ -1139,7 +1094,7 @@ function buildDualValueChartSvg(dates, seriesA, seriesB, idPrefix, opts){
     values.forEach((v,i)=>{
       const x = xFor(i), y = yFor(v);
       const dLabel = `${dates[i].getDate()}.${dates[i].getMonth()+1}.`;
-      dots += `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="2.8" fill="${color}" stroke="#0A1530" stroke-width="1"><title>${dLabel} — ${v.toFixed(2)}${unitLabel}</title></circle>`;
+      dots += `<circle cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="2.8" fill="${color}" stroke="#140F26" stroke-width="1"><title>${dLabel} — ${v.toFixed(2)}${unitLabel}</title></circle>`;
     });
     return `<polyline points="${linePoints}" fill="none" stroke="${color}" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round"/>${dots}`;
   }
@@ -1148,15 +1103,15 @@ function buildDualValueChartSvg(dates, seriesA, seriesB, idPrefix, opts){
   let xLabelsSvg = '';
   dates.forEach((d,i)=>{
     if(i % xLabelStep === 0 || i===n-1){
-      xLabelsSvg += `<text x="${xFor(i).toFixed(1)}" y="${height-8}" text-anchor="middle" font-size="9.5" fill="#7F8CAB" font-family="Inter,sans-serif">${d.getDate()}.${d.getMonth()+1}.</text>`;
+      xLabelsSvg += `<text x="${xFor(i).toFixed(1)}" y="${height-8}" text-anchor="middle" font-size="9.5" fill="#7A6FA0" font-family="Inter,sans-serif">${d.getDate()}.${d.getMonth()+1}.</text>`;
     }
   });
 
   const legendSvg = `
     <circle cx="${padLeft}" cy="12" r="4" fill="${colorA}"/>
-    <text x="${padLeft+9}" y="15.5" font-size="10.5" fill="#DCE3F2" font-family="Inter,sans-serif">${labelA}</text>
+    <text x="${padLeft+9}" y="15.5" font-size="10.5" fill="#E6DFF7" font-family="Inter,sans-serif">${labelA}</text>
     <circle cx="${padLeft+95}" cy="12" r="4" fill="${colorB}"/>
-    <text x="${padLeft+104}" y="15.5" font-size="10.5" fill="#DCE3F2" font-family="Inter,sans-serif">${labelB}</text>
+    <text x="${padLeft+104}" y="15.5" font-size="10.5" fill="#E6DFF7" font-family="Inter,sans-serif">${labelB}</text>
   `;
 
   return `<svg viewBox="0 0 ${width} ${height}" width="${width}" height="${height}" xmlns="http://www.w3.org/2000/svg">
@@ -1858,7 +1813,7 @@ async function renderFinanceChart(){
   }));
   const expenseVals = logs.map(entries => entries.filter(e=>(e.type||'expense')==='expense').reduce((s,e)=>s+(Number(e.amount)||0),0));
   const incomeVals = logs.map(entries => entries.filter(e=>e.type==='income').reduce((s,e)=>s+(Number(e.amount)||0),0));
-  container.innerHTML = buildDualValueChartSvg(dates, expenseVals, incomeVals, 'finance', { labelA:'Ausgaben', labelB:'Einnahmen', colorA:'#FF6F61', colorB:'#3FD17E', unitLabel:' CHF' });
+  container.innerHTML = buildDualValueChartSvg(dates, expenseVals, incomeVals, 'finance', { labelA:'Ausgaben', labelB:'Einnahmen', colorA:'#FF6B8B', colorB:'#4ADE9C', unitLabel:' CHF' });
 }
 document.getElementById('financeRangeSelect').addEventListener('change', (e)=>{
   financeChartDays = parseInt(e.target.value, 10) || 14;
