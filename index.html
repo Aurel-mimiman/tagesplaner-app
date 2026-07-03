@@ -19,8 +19,8 @@
     --silver:#C9CFD3;
     --blue:#D4D9DC;
     --blue-bg:rgba(212,217,220,0.18);
-    --green:#8FCB9E;
-    --red:#D98B8B;
+    --green:#34D399;
+    --red:#EF4444;
   }
   *{box-sizing:border-box;}
   body{
@@ -263,8 +263,8 @@
   .entry-add-row{ display:flex; gap:8px; margin-top:14px; }
   .entry-add-row .load-more{ margin:0; }
   .entry-type-badge{ width:64px; flex-shrink:0; font-size:11px; font-weight:600; text-align:center; padding:3px 6px; border-radius:6px; }
-  .entry-type-badge.expense{ color:var(--red); background:rgba(217,139,139,0.14); }
-  .entry-type-badge.income{ color:var(--green); background:rgba(143,203,158,0.14); }
+  .entry-type-badge.expense{ color:var(--red); background:rgba(239,68,68,0.14); }
+  .entry-type-badge.income{ color:var(--green); background:rgba(52,211,153,0.14); }
 
   /* FINANCE */
   .cat-row{ display:flex; align-items:center; gap:10px; padding:5px 0; }
@@ -1080,7 +1080,7 @@ function buildScoreChartSvg(dates, scores, idPrefix){
 function buildDualValueChartSvg(dates, seriesA, seriesB, idPrefix, opts){
   opts = opts || {};
   const labelA = opts.labelA || 'A', labelB = opts.labelB || 'B';
-  const colorA = opts.colorA || '#D4D9DC', colorB = opts.colorB || '#8FCB9E';
+  const colorA = opts.colorA || '#D4D9DC', colorB = opts.colorB || '#34D399';
   const unitLabel = opts.unitLabel || '';
   const n = dates.length;
   if(n === 0) return '<div class="chart-empty">Keine Daten vorhanden.</div>';
@@ -1827,7 +1827,7 @@ async function renderFinanceChart(){
   }));
   const expenseVals = logs.map(entries => entries.filter(e=>(e.type||'expense')==='expense').reduce((s,e)=>s+(Number(e.amount)||0),0));
   const incomeVals = logs.map(entries => entries.filter(e=>e.type==='income').reduce((s,e)=>s+(Number(e.amount)||0),0));
-  container.innerHTML = buildDualValueChartSvg(dates, expenseVals, incomeVals, 'finance', { labelA:'Ausgaben', labelB:'Einnahmen', colorA:'#D98B8B', colorB:'#8FCB9E', unitLabel:' CHF' });
+  container.innerHTML = buildDualValueChartSvg(dates, expenseVals, incomeVals, 'finance', { labelA:'Ausgaben', labelB:'Einnahmen', colorA:'#EF4444', colorB:'#34D399', unitLabel:' CHF' });
 }
 document.getElementById('financeRangeSelect').addEventListener('change', (e)=>{
   financeChartDays = parseInt(e.target.value, 10) || 14;
